@@ -1,6 +1,6 @@
 //
 //  <%= @module %>View.h
-//  <%= @project_name %>
+//  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //

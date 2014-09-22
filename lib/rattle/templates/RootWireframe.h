@@ -1,8 +1,8 @@
 //
 //  RootWireframe.h
-//  foldparty
+//  <%= @project %>
 //
-//  Created by Balazs on 11/09/14.
+//  Created by <%= @author %> on <%= @date %>.
 //
 //
 
@@ -12,10 +12,5 @@
 @interface RootWireframe : NSObject
 
 - (id)initWithWindow:(UIWindow *)window;
-
-- (void)pushViewController:(UIViewController*)viewController fromController:(UIViewController *)fromController;
-- (void)popToViewController:(UIViewController*)viewController fromController:(UIViewController *)fromController;
-
-- (bool)containsViewController:(UIViewController*)viewController;
 
 @end
