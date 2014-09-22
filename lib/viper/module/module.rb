@@ -23,6 +23,8 @@ module Viper
 
     desc 'list', 'lists available VIPER modules'
     def list
+      return unless File.exists? BASE_PATH
+
       module_names = Dir.entries(BASE_PATH).reject { |d| d == '.' || d == '..' }
       print_table module_names.map.with_index { |m, i| [i+1, m] }
     end
