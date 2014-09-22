@@ -40,19 +40,19 @@ module Viper
 
       # copying template files
       FILES.each do |file_name, folder|
-        template "module/templates/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@module}#{file_name}"
+        template "templates/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@module}#{file_name}"
       end
 
       # rendering dependencies head
       path = Dir::Tmpname.create('dep') { |path| path }
-      template 'module/templates/DependenciesHead.m', path
+      template 'templates/DependenciesHead.m', path
 
       say "\nAdd these lines to the AppDependencies imports:\n\n", :green
       say File.open(path).read + "\n", :yellow
 
       # rendering dependencies body
       path = Dir::Tmpname.create('dep') { |path| path }
-      template 'module/templates/DependenciesBody.m', path
+      template 'templates/DependenciesBody.m', path
 
       say "\nAdd these lines to the AppDependencies#configureDependencies:\n\n", :green
       say File.open(path).read + "\n", :yellow

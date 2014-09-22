@@ -10,6 +10,10 @@
 
 #import "RootWireframe.h"
 
+#import "HomeWireframe.h"
+#import "HomePresenter.h"
+#import "HomeDataManager.h"
+#import "HomeInteractor.h"
 
 @interface <%= @project %>AppDependencies ()
 
