@@ -1,14 +1,14 @@
-require 'rattle/module/module'
+require 'viper/module/module'
 require 'yaml'
 
-module Rattle
+module Viper
   class Commands < Thor
     include Thor::Actions
 
     # ----
     # register additional moduls
-    register(Rattle::Module, 'module', 'module [COMMAND]', 'Managing modules.')
-    Rattle::Module.source_root(File.dirname(__FILE__))
+    register(Viper::Module, 'module', 'module [COMMAND]', 'Managing modules.')
+    Viper::Module.source_root(File.dirname(__FILE__))
 
     # ----
     # initialize VIPER hierarchy
@@ -44,7 +44,7 @@ module Rattle
 
     # ----
     # configuration
-    CONFIG_FILE = '.rattle.yml'
+    CONFIG_FILE = '.viper.yml'
 
     desc 'configure', 'configures project properties'
     def configure

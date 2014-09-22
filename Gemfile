@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rattle.gemspec
+# Specify your gem's dependencies in viper.gemspec
 gemspec

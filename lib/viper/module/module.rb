@@ -1,6 +1,6 @@
 require 'tempfile'
 
-module Rattle
+module Viper
   class Module < Thor
     include Thor::Actions
 
@@ -19,7 +19,7 @@ module Rattle
       'Wireframe.m'       => 'Wireframe'
     }
 
-    Rattle::Module.source_root(File.dirname(__FILE__))
+    Viper::Module.source_root(File.dirname(__FILE__))
 
     desc 'list', 'lists available VIPER modules'
     def list
@@ -29,7 +29,7 @@ module Rattle
 
     desc 'create NAME', 'adds a new VIPER module with the specified name'
     def create(module_name)
-      @config = invoke('rattle:commands:configure', [])
+      @config = invoke('viper:commands:configure', [])
 
       @module  = module_name
       @author  = @config[:author]

@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rattle/version'
+require 'viper/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rattle"
-  spec.version       = Rattle::VERSION
+  spec.name          = "viper"
+  spec.version       = Viper::VERSION
   spec.authors       = ["Balazs Kovacs"]
   spec.email         = ["balazs.kovacs@jbslabs.com"]
   spec.summary       = %q{Little gem for creating VIPER modules.}
