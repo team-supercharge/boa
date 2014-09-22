@@ -1,6 +1,6 @@
 //
 //  <%= @module %>Interactor.m
-//  <%= @project %>
+//  <%= @project.downcase %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //

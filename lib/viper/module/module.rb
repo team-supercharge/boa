@@ -31,11 +31,11 @@ module Viper
 
     desc 'create NAME', 'adds a new VIPER module with the specified name'
     def create(module_name)
-      @config = invoke('viper:commands:configure', [])
+      config = invoke('viper:commands:configure', [])
 
       @module  = module_name
-      @author  = @config[:author]
-      @project = @config[:project]
+      @author  = config[:author]
+      @project = config[:project]
       @date    = Time.now.strftime('%d/%m/%y')
 
       # copying template files
@@ -43,12 +43,19 @@ module Viper
         template "module/templates/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@module}#{file_name}"
       end
 
-      # rendering stuff
+      # rendering dependencies head
       path = Dir::Tmpname.create('dep') { |path| path }
-      template 'module/templates/Dependencies.m', path
+      template 'module/templates/DependenciesHead.m', path
 
-      say "\nAdd these lines to the AppDependencies class:\n\n", :green
-      say File.open(path).read + "\n"
+      say "\nAdd these lines to the AppDependencies imports:\n\n", :green
+      say File.open(path).read + "\n", :yellow
+
+      # rendering dependencies body
+      path = Dir::Tmpname.create('dep') { |path| path }
+      template 'module/templates/DependenciesBody.m', path
+
+      say "\nAdd these lines to the AppDependencies#configureDependencies:\n\n", :green
+      say File.open(path).read + "\n", :yellow
     end
 
     desc 'destroy NAME', 'destroys VIPER module with the specified name'

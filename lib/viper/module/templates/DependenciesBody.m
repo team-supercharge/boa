@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// <%= @module %> module
+// begin <%= @module %> module
 
 // instantiate classes
 <%= @module %>Wireframe   *<%= @module.downcase %>Wireframe   = [[<%= @module %>Wireframe alloc] init];
@@ -25,4 +25,8 @@
 <%= @module.downcase %>Wireframe.rootWireframe = rootWireframe;
 // *** connect more wireframes
 
+// configure delegate
+// *** add delegate here if needed
+
+// end <%= @module %> module
 // ------------------------------------------------------------------

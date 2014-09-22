@@ -8,20 +8,25 @@ module Viper
     # ----
     # register additional moduls
     register(Viper::Module, 'module', 'module [COMMAND]', 'Managing modules.')
-    Viper::Module.source_root(File.dirname(__FILE__))
+    Viper::Commands.source_root(File.dirname(__FILE__))
 
     # ----
     # initialize VIPER hierarchy
-    FILES = {
+    BASE_FILES = {
+      'AppDelegate.h'     => 'Classes',
+      'AppDelegate.m'     => 'Classes',
       'AppDependencies.h' => 'Classes',
-      'AppDependencies.m' => 'Classes',
-      'RootWireframe.h' => 'Classes/Common/Wireframe',
-      'RootWireframe.m' => 'Classes/Common/Wireframe'
+      'AppDependencies.m' => 'Classes'
+    }
+
+    PROJECT_FILES = {
+      'RootWireframe.h'   => 'Classes/Common/Wireframe',
+      'RootWireframe.m'   => 'Classes/Common/Wireframe'
     }
 
     desc 'init', 'initializes VIPER project'
     def init
-      @config = invoke(:configure, [])
+      config = invoke(:configure, [])
 
       # Classes
       empty_directory 'Classes'
@@ -37,9 +42,19 @@ module Viper
       # Classes/Modules
       empty_directory 'Classes/Modules'
 
-      # AppDependencies
+      # Add config
+      @project = config[:project]
+      @author  = config[:author]
+      @date    = Time.now.strftime('%d/%m/%y')
 
-      # RootWireframe
+      # Generate files
+      BASE_FILES.each do |file_name, folder|
+        template "templates/#{file_name}", "#{folder}/#{@project}#{file_name}"
+      end
+
+      PROJECT_FILES.each do |file_name, folder|
+        template "templates/#{file_name}", "#{folder}/#{file_name}"
+      end
     end
 
     # ----

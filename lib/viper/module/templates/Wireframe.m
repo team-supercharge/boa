@@ -1,6 +1,6 @@
 //
 //  <%= @module %>Wireframe.m
-//  <%= @project %>
+//  <%= @project.downcase %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //

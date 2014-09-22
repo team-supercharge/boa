@@ -1,6 +1,6 @@
 //
 //  <%= @module %>Presenter.m
-//  <%= @project %>
+//  <%= @project.downcase %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
