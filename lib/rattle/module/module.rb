@@ -2,8 +2,6 @@ module Rattle
   class Module < Thor
     include Thor::Actions
 
-    namespace :module
-
     BASE_PATH = 'Classes/Modules'
 
     FILES = {
@@ -21,7 +19,7 @@ module Rattle
 
     Rattle::Module.source_root(File.dirname(__FILE__))
 
-    desc "add MODULE", "adds a new VIPER module with the specified name"
+    desc 'add MODULE', 'adds a new VIPER module with the specified name'
     def add(module_name)
       @module = module_name
       @author = 'JBS Labs'
@@ -32,5 +30,9 @@ module Rattle
       end
     end
 
+    desc 'list', 'lists available VIPER modules'
+    def list
+      puts 'listing'
+    end
   end
 end
