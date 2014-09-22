@@ -1,6 +1,6 @@
 //
 //  <%= @module %>DataManager.h
-//  <%= @project.downcase %>
+//  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //

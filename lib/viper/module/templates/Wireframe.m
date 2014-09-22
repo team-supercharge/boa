@@ -1,6 +1,6 @@
 //
 //  <%= @module %>Wireframe.m
-//  <%= @project.downcase %>
+//  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
@@ -19,22 +19,15 @@
 
 - (void)presentSelfFromViewController:(UIViewController *)viewController
 {
-    if ([self.rootWireframe containsViewController:self.viewController])
-    {
-        // pop back
-        [self.rootWireframe popToViewController:self.viewController fromController:viewController];
-        return;
-    }
-
     // save reference
-    self.viewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
+    self.viewController = [[<%= @module %>ViewController alloc] initWithNibName:@"<%= @module %>ViewController" bundle:nil];
 
     // view <-> presenter
     self.presenter.userInterface = self.viewController;
     self.viewController.eventHandler = self.presenter;
 
     // present controller
-    [self.rootWireframe pushViewController:self.viewController fromController:viewController];
+    // *** present self with RootViewController
 }
 
 @end

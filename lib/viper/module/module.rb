@@ -15,6 +15,8 @@ module Viper
       'Presenter.h'       => 'Presenter',
       'Presenter.m'       => 'Presenter',
       'ViewInterface.h'   => 'View',
+      'ViewController.h'  => 'View',
+      'ViewController.m'  => 'View',
       'Wireframe.h'       => 'Wireframe',
       'Wireframe.m'       => 'Wireframe'
     }

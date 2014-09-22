@@ -1,6 +1,6 @@
 //
 //  <%= @project %>AppDependencies.h
-//  <%= @project.downcase %>
+//  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
