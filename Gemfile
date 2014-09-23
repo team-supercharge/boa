@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in viper.gemspec
+# Specify your gem's dependencies in boa.gemspec
 gemspec

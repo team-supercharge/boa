@@ -1,14 +1,14 @@
-require 'viper/module/module'
+require 'boa/module/module'
 require 'yaml'
 
-module Viper
+module Boa
   class Commands < Thor
     include Thor::Actions
 
     # ----
     # register additional moduls
-    register(Viper::Module, 'module', 'module [COMMAND]', 'Managing modules.')
-    Viper::Commands.source_root(File.dirname(__FILE__))
+    register(Boa::Module, 'module', 'module [COMMAND]', 'Managing modules.')
+    Boa::Commands.source_root(File.dirname(__FILE__))
 
     # ----
     # initialize VIPER hierarchy
@@ -59,7 +59,7 @@ module Viper
 
     # ----
     # configuration
-    CONFIG_FILE = '.viper.yml'
+    CONFIG_FILE = '.boa.yml'
 
     desc 'configure', 'configures project properties'
     def configure

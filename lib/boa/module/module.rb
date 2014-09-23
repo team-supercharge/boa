@@ -1,6 +1,6 @@
 require 'tempfile'
 
-module Viper
+module Boa
   class Module < Thor
     include Thor::Actions
 
@@ -21,7 +21,7 @@ module Viper
       'Wireframe.m'       => 'Wireframe'
     }
 
-    Viper::Module.source_root(File.dirname(__FILE__))
+    Boa::Module.source_root(File.dirname(__FILE__))
 
     desc 'list', 'lists available VIPER modules'
     def list
@@ -33,7 +33,7 @@ module Viper
 
     desc 'create NAME', 'adds a new VIPER module with the specified name'
     def create(module_name)
-      config = invoke('viper:commands:configure', [])
+      config = invoke('boa:commands:configure', [])
 
       @module  = module_name
       @author  = config[:author]

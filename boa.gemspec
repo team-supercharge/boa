@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'viper/version'
+require 'boa/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "viper"
-  spec.version       = Viper::VERSION
+  spec.name          = "boa"
+  spec.version       = Boa::VERSION
   spec.authors       = ["Balazs Kovacs"]
   spec.email         = ["balazs.kovacs@jbslabs.com"]
   spec.summary       = %q{A simple gem for creating VIPER projects and modules.}
