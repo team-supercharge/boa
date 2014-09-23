@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Viper::VERSION
   spec.authors       = ["Balazs Kovacs"]
   spec.email         = ["balazs.kovacs@jbslabs.com"]
-  spec.summary       = %q{Little gem for creating VIPER modules.}
+  spec.summary       = %q{A simple gem for creating VIPER projects and modules.}
   spec.description   = %q{This gem provides VIPER initialization and module generation functionalities.}
   spec.homepage      = "http://jbslabs.com"
   spec.license       = "MIT"

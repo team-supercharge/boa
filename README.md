@@ -1,6 +1,6 @@
 # Viper
 
-TODO: Write a gem description
+Viper is a simple gem to initialize VIPER projects and add modules to them.
 
 ## Installation
 
@@ -18,12 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Create an Xcode project
 
-## Contributing
+2. Initialize basic VIPER structure with
 
-1. Fork it ( https://github.com/[my-github-username]/viper/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+    viper init
+
+3. Input your project name and the author (these will be used in generated files). You can change these settings in `.viper.yml`
+
+4. Create your module with
+
+    viper module create Example
+
