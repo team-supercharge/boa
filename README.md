@@ -26,6 +26,14 @@ boa init
 boa module create Example
 ```
 
+## Changes
+
+#### v0.2.0
+  * added class prefix option
+
+#### v0.1.1
+  * initial version
+
 ## Contributing
 
 Contributions are always welcome! :)
