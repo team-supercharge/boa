@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ App delegate for the <%= @project %> project.
+ */
 @interface <%= @project %>AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

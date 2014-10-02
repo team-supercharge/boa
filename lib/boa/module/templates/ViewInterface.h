@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ View interface for the <%= @module %> module.
+ */
 @protocol <%= @prefixed_module %>ViewInterface <NSObject>
 
 @end

@@ -17,6 +17,9 @@
 @class <%= @prefixed_module %>Wireframe;
 @class <%= @prefixed_module %>Interactor;
 
+/**
+ Display logic for the <%= @module %> module.
+ */
 @interface <%= @prefixed_module %>Presenter : NSObject <<%= @prefixed_module %>ModuleInterface>
 
 @property (nonatomic, strong) <%= @prefixed_module %>Interactor *interactor;
