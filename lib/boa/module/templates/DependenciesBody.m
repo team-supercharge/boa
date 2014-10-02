@@ -2,10 +2,10 @@
 // begin <%= @module %> module
 
 // instantiate classes
-<%= @prefixed_module %>Wireframe   *<%= @module.downcase %>Wireframe   = [[<%= @prefixed_module %>Wireframe alloc] init];
-<%= @prefixed_module %>Presenter   *<%= @module.downcase %>Presenter   = [[<%= @prefixed_module %>Presenter alloc] init];
-<%= @prefixed_module %>DataManager *<%= @module.downcase %>DataManager = [[<%= @prefixed_module %>DataManager alloc] init];
-<%= @prefixed_module %>Interactor  *<%= @module.downcase %>Interactor  = [[<%= @prefixed_module %>Interactor alloc] init];
+<%= @prefixed_module %>Wireframe   *<%= @module.downcase %>Wireframe   = [<%= @prefixed_module %>Wireframe new];
+<%= @prefixed_module %>Presenter   *<%= @module.downcase %>Presenter   = [<%= @prefixed_module %>Presenter new];
+<%= @prefixed_module %>DataManager *<%= @module.downcase %>DataManager = [<%= @prefixed_module %>DataManager new];
+<%= @prefixed_module %>Interactor  *<%= @module.downcase %>Interactor  = [<%= @prefixed_module %>Interactor new];
 
 // presenter <-> wireframe
 <%= @module.downcase %>Presenter.wireframe = <%= @module.downcase %>Wireframe;
