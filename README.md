@@ -28,6 +28,9 @@ boa module create Example
 
 ## Changes
 
+#### v0.2.1
+  * added basic appledoc comments for interfaces and protocols
+
 #### v0.2.0
   * added class prefix option
 
