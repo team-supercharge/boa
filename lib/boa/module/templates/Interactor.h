@@ -1,5 +1,5 @@
 //
-//  <%= @module %>Interactor.h
+//  <%= @prefixed_module %>Interactor.h
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "<%= @module %>Presenter.h"
-#import "<%= @module %>DataManager.h"
+#import "<%= @prefixed_module %>Presenter.h"
+#import "<%= @prefixed_module %>DataManager.h"
 
-@class <%= @module %>Presenter;
+@class <%= @prefixed_module %>Presenter;
 
-@interface <%= @module %>Interactor : NSObject
+@interface <%= @prefixed_module %>Interactor : NSObject
 
-@property (nonatomic, strong) <%= @module %>Presenter *presenter;
-@property (nonatomic, strong) <%= @module %>DataManager *dataManager;
+@property (nonatomic, strong) <%= @prefixed_module %>Presenter *presenter;
+@property (nonatomic, strong) <%= @prefixed_module %>DataManager *dataManager;
 
 @end

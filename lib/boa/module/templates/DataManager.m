@@ -1,13 +1,13 @@
 //
-//  <%= @module %>DataManager.m
+//  <%= @prefixed_module %>DataManager.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "<%= @module %>DataManager.h"
+#import "<%= @prefixed_module %>DataManager.h"
 
-@implementation <%= @module %>DataManager
+@implementation <%= @prefixed_module %>DataManager
 
 @end

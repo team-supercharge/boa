@@ -1,16 +1,16 @@
 //
-//  <%= @module %>Presenter.m
+//  <%= @prefixed_module %>Presenter.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "<%= @module %>Presenter.h"
+#import "<%= @prefixed_module %>Presenter.h"
 
-@implementation <%= @module %>Presenter
+@implementation <%= @prefixed_module %>Presenter
 
-#pragma mark - <%= @module %>ModuleInterface methods
+#pragma mark - <%= @prefixed_module %>ModuleInterface methods
 
 // implement module interface here
 

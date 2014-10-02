@@ -1,5 +1,5 @@
 //
-//  <%= @module %>Wireframe.h
+//  <%= @prefixed_module %>Wireframe.h
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 
 #import "RootWireframe.h"
-#import "<%= @module %>Presenter.h"
+#import "<%= @prefixed_module %>Presenter.h"
 
-@class <%= @module %>Presenter;
+@class <%= @prefixed_module %>Presenter;
 
-@interface <%= @module %>Wireframe : NSObject
+@interface <%= @prefixed_module %>Wireframe : NSObject
 
 @property (nonatomic, strong) RootWireframe *rootWireframe;
-@property (nonatomic, strong) <%= @module %>Presenter *presenter;
+@property (nonatomic, strong) <%= @prefixed_module %>Presenter *presenter;
 
 // initialization
 - (void)presentSelfFromViewController:(UIViewController *)viewController;

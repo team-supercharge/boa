@@ -1,5 +1,5 @@
 //
-//  <%= @module %>Presenter.h
+//  <%= @prefixed_module %>Presenter.h
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
@@ -8,20 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-#import "<%= @module %>ModuleInterface.h"
+#import "<%= @prefixed_module %>ModuleInterface.h"
 
-#import "<%= @module %>Interactor.h"
-#import "<%= @module %>Wireframe.h"
-#import "<%= @module %>ViewInterface.h"
+#import "<%= @prefixed_module %>Interactor.h"
+#import "<%= @prefixed_module %>Wireframe.h"
+#import "<%= @prefixed_module %>ViewInterface.h"
 
-@class <%= @module %>Wireframe;
-@class <%= @module %>Interactor;
+@class <%= @prefixed_module %>Wireframe;
+@class <%= @prefixed_module %>Interactor;
 
-@interface <%= @module %>Presenter : NSObject <<%= @module %>ModuleInterface>
+@interface <%= @prefixed_module %>Presenter : NSObject <<%= @prefixed_module %>ModuleInterface>
 
-@property (nonatomic, strong) <%= @module %>Interactor *interactor;
-@property (nonatomic, strong) <%= @module %>Wireframe *wireframe;
+@property (nonatomic, strong) <%= @prefixed_module %>Interactor *interactor;
+@property (nonatomic, strong) <%= @prefixed_module %>Wireframe *wireframe;
 
-@property (nonatomic, strong) UIViewController<<%= @module %>ViewInterface> *userInterface;
+@property (nonatomic, strong) UIViewController<<%= @prefixed_module %>ViewInterface> *userInterface;
 
 @end

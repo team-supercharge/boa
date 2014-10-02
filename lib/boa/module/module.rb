@@ -35,14 +35,15 @@ module Boa
     def create(module_name)
       config = invoke('boa:commands:configure', [])
 
-      @module  = module_name
-      @author  = config[:author]
-      @project = config[:project]
-      @date    = Time.now.strftime('%d/%m/%y')
+      @module          = module_name
+      @prefixed_module = config[:class_prefix] + @module
+      @project         = config[:project]
+      @author          = config[:author]
+      @date            = Time.now.strftime('%d/%m/%y')
 
       # copying template files
       FILES.each do |file_name, folder|
-        template "templates/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@module}#{file_name}"
+        template "templates/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@prefixed_module}#{file_name}"
       end
 
       # rendering dependencies head

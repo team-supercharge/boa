@@ -1,5 +1,5 @@
 //
-//  <%= @module %>ModuleInterface.h
+//  <%= @prefixed_module %>ModuleInterface.h
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol <%= @module %>ModuleInterface <NSObject>
+@protocol <%= @prefixed_module %>ModuleInterface <NSObject>
 
 @end
 
-@protocol <%= @module %>ModuleDelegate <NSObject>
+@protocol <%= @prefixed_module %>ModuleDelegate <NSObject>
 
 @end

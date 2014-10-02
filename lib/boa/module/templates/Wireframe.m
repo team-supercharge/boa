@@ -1,26 +1,26 @@
 //
-//  <%= @module %>Wireframe.m
+//  <%= @prefixed_module %>Wireframe.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "<%= @module %>Wireframe.h"
-#import "<%= @module %>ViewController.h"
+#import "<%= @prefixed_module %>Wireframe.h"
+#import "<%= @prefixed_module %>ViewController.h"
 
-@interface <%= @module %>Wireframe ()
+@interface <%= @prefixed_module %>Wireframe ()
 
-@property (nonatomic, strong) <%= @module %>ViewController *viewController;
+@property (nonatomic, strong) <%= @prefixed_module %>ViewController *viewController;
 
 @end
 
-@implementation <%= @module %>Wireframe
+@implementation <%= @prefixed_module %>Wireframe
 
 - (void)presentSelfFromViewController:(UIViewController *)viewController
 {
     // save reference
-    self.viewController = [[<%= @module %>ViewController alloc] initWithNibName:@"<%= @module %>ViewController" bundle:nil];
+    self.viewController = [[<%= @prefixed_module %>ViewController alloc] initWithNibName:@"<%= @prefixed_module %>ViewController" bundle:nil];
 
     // view <-> presenter
     self.presenter.userInterface = self.viewController;

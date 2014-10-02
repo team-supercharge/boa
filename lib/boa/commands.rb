@@ -63,12 +63,15 @@ module Boa
 
     desc 'configure', 'configures project properties'
     def configure
-      return YAML.load_file(CONFIG_FILE) if File.exists? CONFIG_FILE
+      config = File.exists?(CONFIG_FILE) ? YAML.load_file(CONFIG_FILE) : {}
 
-      config = {
-        project: ask('Project name:'),
-        author:  ask('Author:')
-      }
+      project      = ask("Project name [#{config[:project]}] ?")
+      class_prefix = ask("Class prefix [#{config[:class_prefix]}] ?")
+      author       = ask("Author [#{config[:author]}] ?")
+
+      config[:project]      = project.empty?      ? config[:project] || ''      : project
+      config[:class_prefix] = class_prefix.empty? ? config[:class_prefix] || '' : class_prefix
+      config[:author]       = author.empty?       ? config[:author] || ''       : author
 
       File.open(CONFIG_FILE, 'w') do |f|
         f.write config.to_yaml

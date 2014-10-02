@@ -1,18 +1,18 @@
 //
-//  <%= @module %>ViewController.m
+//  <%= @prefixed_module %>ViewController.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "<%= @module %>ViewController.h"
+#import "<%= @prefixed_module %>ViewController.h"
 
-@interface <%= @module %>ViewController ()
+@interface <%= @prefixed_module %>ViewController ()
 
 @end
 
-@implementation <%= @module %>ViewController
+@implementation <%= @prefixed_module %>ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,7 +41,7 @@
     [super viewDidAppear:animated];
 }
 
-#pragma mark - <%= @module %>ViewInterface methods
+#pragma mark - <%= @prefixed_module %>ViewInterface methods
 
 // *** implement view_interface methods here
 
