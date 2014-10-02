@@ -13,6 +13,9 @@
 
 @class <%= @prefixed_module %>Presenter;
 
+/**
+ Business logic for the <%= @module %> module.
+ */
 @interface <%= @prefixed_module %>Interactor : NSObject
 
 @property (nonatomic, strong) <%= @prefixed_module %>Presenter *presenter;

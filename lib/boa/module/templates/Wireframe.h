@@ -13,6 +13,9 @@
 
 @class <%= @prefixed_module %>Presenter;
 
+/**
+ Module wireframe for the <%= @module %> module.
+ */
 @interface <%= @prefixed_module %>Wireframe : NSObject
 
 @property (nonatomic, strong) RootWireframe *rootWireframe;
