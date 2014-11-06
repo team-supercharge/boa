@@ -18,7 +18,14 @@ Install gem with:
 boa init
 ```
 
-3. Input your project name and the author (these will be used in generated files). You can change these settings in `.boa.yml`
+3. Input
+
+* your project name
+* preferred language
+* author
+# class prefix
+
+(these will be used in generated files). You can change these settings in `.boa.yml`
 
 4. Create your module with
 
@@ -26,7 +33,12 @@ boa init
 boa module create Example
 ```
 
+You can use saved configuration by just pressing enters.
+
 ## Changes
+
+#### v0.3
+  * Swift syntax added
 
 #### v0.2
   * added class prefix option
