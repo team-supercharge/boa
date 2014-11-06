@@ -75,7 +75,7 @@ module Boa
       path = Dir::Tmpname.create('dep') { |path| path }
       case lang
       when 'objc'  then template('templates/objc/DependenciesBody.m', path)
-      when 'swift' then template('templates/objc/DependenciesBody.swift', path)
+      when 'swift' then template('templates/swift/DependenciesBody.swift', path)
       end
 
       say "\nAdd these lines to the AppDependencies#configureDependencies:\n\n", :green

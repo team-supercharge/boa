@@ -84,7 +84,7 @@ module Boa
       config = File.exists?(CONFIG_FILE) ? YAML.load_file(CONFIG_FILE) : {}
 
       project      = ask("Project name [#{config[:project]}] ?")
-      language     = ask("Project language [#{config[:language]}] [objc/swift] ?")
+      language     = ask("Project language [#{config[:language]}] ?", :limited_to => ["objc", "swift", ""])
       class_prefix = ask("Class prefix [#{config[:class_prefix]}] ?")
       author       = ask("Author [#{config[:author]}] ?")
 
