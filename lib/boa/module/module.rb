@@ -6,7 +6,7 @@ module Boa
 
     BASE_PATH = 'Classes/Modules'
 
-    FILES = {
+    FILES_OBJC = {
       'DataManager.h'     => 'DataManager',
       'DataManager.m'     => 'DataManager',
       'Interactor.h'      => 'Interactor',
@@ -19,6 +19,16 @@ module Boa
       'ViewController.m'  => 'View',
       'Wireframe.h'       => 'Wireframe',
       'Wireframe.m'       => 'Wireframe'
+    }
+
+    FILES_SWIFT = {
+      'DataManager.swift'     => 'DataManager',
+      'Interactor.swift'      => 'Interactor',
+      'ModuleInterface.swift' => 'ModuleInterface',
+      'Presenter.swift'       => 'Presenter',
+      'ViewInterface.swift'   => 'View',
+      'ViewController.swift'  => 'View',
+      'Wireframe.swift'       => 'Wireframe'
     }
 
     Boa::Module.source_root(File.dirname(__FILE__))
@@ -40,22 +50,33 @@ module Boa
       @project         = config[:project]
       @author          = config[:author]
       @date            = Time.now.strftime('%d/%m/%y')
+      lang             = config[:language]
 
       # copying template files
-      FILES.each do |file_name, folder|
-        template "templates/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@prefixed_module}#{file_name}"
+      files = case lang
+              when 'objc'  then FILES_OBJC
+              when 'swift' then FILES_SWIFT
+              end
+      files.each do |file_name, folder|
+        template "templates/#{lang}/#{file_name}", "#{BASE_PATH}/#{@module}/#{folder}/#{@prefixed_module}#{file_name}"
       end
 
       # rendering dependencies head
       path = Dir::Tmpname.create('dep') { |path| path }
-      template 'templates/DependenciesHead.m', path
+      case lang
+      when 'objc'  then template('templates/objc/DependenciesHead.m', path)
+      when 'swift' then template('templates/swift/DependenciesHead.swift', path)
+      end
 
       say "\nAdd these lines to the AppDependencies imports:\n\n", :green
       say File.open(path).read + "\n", :yellow
 
       # rendering dependencies body
       path = Dir::Tmpname.create('dep') { |path| path }
-      template 'templates/DependenciesBody.m', path
+      case lang
+      when 'objc'  then template('templates/objc/DependenciesBody.m', path)
+      when 'swift' then template('templates/swift/DependenciesBody.swift', path)
+      end
 
       say "\nAdd these lines to the AppDependencies#configureDependencies:\n\n", :green
       say File.open(path).read + "\n", :yellow
