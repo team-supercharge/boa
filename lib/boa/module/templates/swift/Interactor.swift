@@ -10,6 +10,6 @@ import Foundation
 
 class <%= @prefixed_module %>Interactor: NSObject
 {
-    var presenter: <%= @prefixed_module %>Presenter?
+    weak var presenter: <%= @prefixed_module %>Presenter?
     var dataManager: <%= @prefixed_module %>DataManager?
 }

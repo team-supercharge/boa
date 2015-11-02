@@ -23,8 +23,8 @@
 @interface <%= @prefixed_module %>Presenter : NSObject <<%= @prefixed_module %>ModuleInterface>
 
 @property (nonatomic, strong) <%= @prefixed_module %>Interactor *interactor;
-@property (nonatomic, strong) <%= @prefixed_module %>Wireframe *wireframe;
+@property (nonatomic, weak) <%= @prefixed_module %>Wireframe *wireframe;
 
-@property (nonatomic, strong) UIViewController<<%= @prefixed_module %>ViewInterface> *userInterface;
+@property (nonatomic, weak) UIViewController<<%= @prefixed_module %>ViewInterface> *userInterface;
 
 @end

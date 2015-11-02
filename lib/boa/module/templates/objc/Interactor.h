@@ -18,7 +18,7 @@
  */
 @interface <%= @prefixed_module %>Interactor : NSObject
 
-@property (nonatomic, strong) <%= @prefixed_module %>Presenter *presenter;
+@property (nonatomic, weak) <%= @prefixed_module %>Presenter *presenter;
 @property (nonatomic, strong) <%= @prefixed_module %>DataManager *dataManager;
 
 @end
