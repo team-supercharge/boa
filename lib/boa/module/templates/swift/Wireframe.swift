@@ -48,6 +48,10 @@ class <%= @prefixed_module %>Wireframe: NSObject
         interactor.dataManager = dataManager
 
         //  Present View
-
+        if let nav = viewController.navigationController {
+            nav.pushViewController(view, animated: true)
+        } else {
+            viewController.present(view, animated: true, completion: nil)
+        }
     }
 }
