@@ -34,7 +34,7 @@ class <%= @prefixed_module %>Wireframe: NSObject
         let interactor = <%= @prefixed_module %>Interactor()
         let dataManager = <%= @prefixed_module %>DataManager()
 
-        let view = <%= @prefixed_module &>ViewController(nibName: "<%= @prefixed_module %>ViewController", bundle: nil)
+        let view = <%= @prefixed_module %>ViewController(nibName: "<%= @prefixed_module %>ViewController", bundle: nil)
 
         presenter.wireframe = wireframe
         presenter.interactor = interactor
