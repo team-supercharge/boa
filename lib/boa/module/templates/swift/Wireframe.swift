@@ -29,10 +29,10 @@ class <%= @prefixed_module %>Wireframe: NSObject
     }
 
     class func presentFromViewController(_ viewController: UIViewController) {
-        let wireframe = <%= @prefixed_module &>Wireframe()
-        let presenter = <%= @prefixed_module &>Presenter()
-        let interactor = <%= @prefixed_module &>Interactor()
-        let dataManager = <%= @prefixed_module &>DataManager()
+        let wireframe = <%= @prefixed_module %>Wireframe()
+        let presenter = <%= @prefixed_module %>Presenter()
+        let interactor = <%= @prefixed_module %>Interactor()
+        let dataManager = <%= @prefixed_module %>DataManager()
 
         let view = <%= @prefixed_module &>ViewController(nibName: "<%= @prefixed_module %>ViewController", bundle: nil)
 
