@@ -45,6 +45,7 @@ class <%= @prefixed_module %>Wireframe: NSObject
         view.eventHandler = presenter
 
         wireframe.presenter = presenter
+        wireframe.viewController = view
         wireframe.parameters = parameters
 
         interactor.presenter = presenter
