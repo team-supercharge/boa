@@ -15,6 +15,8 @@ class <%= @prefixed_module %>Wireframe: NSObject
     weak var presenter: <%= @prefixed_module %>Presenter?
     weak var viewController: <%= @prefixed_module %>ViewController?
 
+    var parameters: Any?
+
     func presentSelfFromViewController(viewController: UIViewController)
     {
         // save reference
@@ -28,7 +30,7 @@ class <%= @prefixed_module %>Wireframe: NSObject
         // *** present self with RootViewController
     }
 
-    class func presentFromViewController(_ viewController: UIViewController) {
+    class func presentFromViewController(_ viewController: UIViewController, _ parameters: Any? = nil) {
         let wireframe = <%= @prefixed_module %>Wireframe()
         let presenter = <%= @prefixed_module %>Presenter()
         let interactor = <%= @prefixed_module %>Interactor()
@@ -43,6 +45,7 @@ class <%= @prefixed_module %>Wireframe: NSObject
         view.eventHandler = presenter
 
         wireframe.presenter = presenter
+        wireframe.parameters = parameters
 
         interactor.presenter = presenter
         interactor.dataManager = dataManager
