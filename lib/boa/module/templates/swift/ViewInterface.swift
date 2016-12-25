@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol <%= @prefixed_module %>ViewInterface
+protocol <%= @prefixed_module %>ViewInterface: class
 {
 
 }

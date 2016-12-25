@@ -12,7 +12,7 @@ import UIKit
 class <%= @project %>AppDependencies: NSObject
 {
 
-    class func initWithWindow(window: UIWindow) -> <%= @project %>AppDependencies
+    class func initWithWindow(_ window: UIWindow) -> <%= @project %>AppDependencies
     {
 
         let obj = <%= @project %>AppDependencies()
@@ -26,7 +26,7 @@ class <%= @project %>AppDependencies: NSObject
         // *** present first wireframe here
     }
 
-    func configureDependencies(window: UIWindow)
+    func configureDependencies(_ window: UIWindow)
     {
         // -----
         // root classes
