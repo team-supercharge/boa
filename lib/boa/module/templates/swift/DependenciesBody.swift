@@ -2,10 +2,10 @@
 // begin <%= @module %> module
 
 // instantiate classes
-var <%= @module.downcase %>Wireframe: <%= @prefixed_module %>Wireframe      = <%= @prefixed_module %>Wireframe()
-var <%= @module.downcase %>Presenter: <%= @prefixed_module %>Presenter      = <%= @prefixed_module %>Presenter()
-var <%= @module.downcase %>DataManager: <%= @prefixed_module %>DataManager  = <%= @prefixed_module %>DataManager()
-var <%= @module.downcase %>Interactor: <%= @prefixed_module %>Interactor    = <%= @prefixed_module %>Interactor()
+let <%= @module.downcase %>Wireframe: <%= @prefixed_module %>Wireframe      = <%= @prefixed_module %>Wireframe()
+let <%= @module.downcase %>Presenter: <%= @prefixed_module %>Presenter      = <%= @prefixed_module %>Presenter()
+let <%= @module.downcase %>DataManager: <%= @prefixed_module %>DataManager  = <%= @prefixed_module %>DataManager()
+let <%= @module.downcase %>Interactor: <%= @prefixed_module %>Interactor    = <%= @prefixed_module %>Interactor()
 
 // presenter <-> wireframe
 <%= @module.downcase %>Presenter.wireframe = <%= @module.downcase %>Wireframe
