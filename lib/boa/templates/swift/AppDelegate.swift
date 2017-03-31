@@ -14,11 +14,11 @@ class <%= @project %>AppDelegate: UIResponder, UIApplicationDelegate
     var window: UIWindow?
     var dependencies: <%= @project %>AppDependencies?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         // initialize window
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
 
         // initialize dependencies
         self.dependencies = <%= @project %>AppDependencies.initWithWindow(self.window!)
