@@ -2,6 +2,9 @@
 
 Boa is a simple gem to initialize VIPER projects and add modules to them.
 
+## Requirements
+* Objective-C or Swift 3.x
+
 ## Installation
 
 Install gem with:
